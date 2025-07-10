@@ -1,0 +1,463 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.welcome-section {
+    background-color: #03574e;
+    padding: 50px 0;
+    text-align: center;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+
+nav {
+    background-color: #0d6c61;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f4f4f4; 
+    gap: 20px;
+}
+
+.image-container img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.text-container {
+    max-width: 600px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00695c;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+h3 {
+    text-align: center;
+    font-size: small;
+}
+
+
+#tourism {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+}
+
+#tourism h2 {
+    text-align: center;
+    color: #00695c;
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tourism-spot {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.tourism-spot.reverse {
+    flex-direction: row-reverse;
+}
+
+.tourism-image img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease; 
+}
+
+.tourism-image img:hover {
+    transform: scale(1.05); 
+}
+
+.tourism-text {
+    max-width: 600px;
+    color: #333;
+}
+
+.tourism-text h3 {
+    color: #004d40;
+    font-size: 2em;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.tourism-text p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+    .tourism-spot {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tourism-spot.reverse {
+        flex-direction: column;
+    }
+
+    .tourism-image img {
+        width: 90%;
+    }
+
+    .tourism-text {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+
+
+
+.districts-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.district-card {
+    background-size: cover;
+    background-position: center;
+    width: 22%;
+    margin: 10px 5px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 250px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.district-card:hover {
+    transform: scale(1.25); 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.district-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.district-details {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type="radio"]:checked + .district-name + .district-details {
+    display: block; 
+}
+
+
+
+.industries-cards {
+   display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 30px 0;
+}
+
+.industry-card {
+   background-size: cover;
+    background-position: center;
+    width: 22%;
+    margin: 10px 5px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 250px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.industry-card:hover {
+     transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.industry-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.industry-details {
+      display: none;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type="radio"]:checked + .industry-name + .industry-details {
+    display: block; 
+}
+
+
+#minerals {
+    padding: 30px 20px;
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+#minerals h2 {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.mineral-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.mineral-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.mineral-image {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+}
+
+.mineral-info {
+    padding: 10px;
+}
+
+.mineral-info h3 {
+    font-size: 1.2em;
+    color: #00796b;
+    margin: 5px 0;
+}
+
+.mineral-info p {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0;
+}
+
+
+#explore-more {
+    background-image: url('assets/explore-jharkhand.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+#explore-more::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.explore-content {
+    position: relative;
+    z-index: 1;
+}
+
+#explore-more h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+#explore-more p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explore-button {
+    background-color: #ffcc00;
+    color: #004d40;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background-color: #ffc107;
+    color: #00332c;
+}
+
+#main-footer {
+    background-color: #004d40;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 15px;
+}
+
+.footer-column h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 1em;
+    color: #e0f2f1;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+}
+
+.footer-column ul li a {
+    color: #e0f2f1;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+
+#sub-footer {
+    background-color: #00332c;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
